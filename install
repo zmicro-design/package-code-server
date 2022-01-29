@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=v4.0.2
+VERSION=4.0.2
 
 help() {
   echo "Usage:"
