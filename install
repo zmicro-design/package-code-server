@@ -19,7 +19,11 @@ core() {
   fi
 
   install
-  log::success "install code-server success."
+  if [ "$?" != "0" ]; then
+    log::error "failed to install code-server."
+  else
+    log::success "install code-server success."
+  fi
 }
 
 run() {
