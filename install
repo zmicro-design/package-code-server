@@ -1,0 +1,29 @@
+#!/bin/bash
+
+VERSION=v4.0.2
+
+help() {
+  echo "Usage:"
+  echo "  zmicro package install code-server <args...>"
+  echo ""
+}
+
+install() {
+  curl -fsSL https://code-server.dev/install.sh | sh --version=$VERSION
+}
+
+core() {
+  if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    help
+    exit 0
+  fi
+
+  install
+  log::success "install code-server success."
+}
+
+run() {
+  core $@
+}
+
+run $@
