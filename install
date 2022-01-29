@@ -9,7 +9,7 @@ help() {
 }
 
 install() {
-  curl -fsSL https://code-server.dev/install.sh | sh --version=$VERSION
+  curl -fsSL https://code-server.dev/install.sh | sh -s -- --version=$VERSION
 }
 
 core() {
