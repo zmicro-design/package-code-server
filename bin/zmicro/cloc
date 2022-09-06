@@ -1,0 +1,17 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro code-server <args ...>"
+  echo ""
+}
+
+core() {
+  code-server "$@"
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"
